@@ -52,4 +52,12 @@ public class PlayerController : MonoBehaviour
         rb.MovePosition(rb.position + moveVelocity * Time.deltaTime);
         
     }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("interactObject")){
+            Debug.Log(collider.name);
+
+        }
+    }
 }
