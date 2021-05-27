@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveVelocity;
     public Animator animator;
     public SpriteRenderer sprite;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         sprite = GetComponent<SpriteRenderer>();
+
+        
     }
 
     // Update is called once per frame
@@ -53,11 +56,9 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    private void OnCollisionEnter2D(Collision2D collider)
     {
-        if (collider.CompareTag("interactObject")){
-            Debug.Log(collider.name);
-
-        }
+        print("hello"); 
+        
     }
 }

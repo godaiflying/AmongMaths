@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class interactable : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public SpriteRenderer border;
+
+    private void Start()
     {
-        
+        border = gameObject.GetComponent<SpriteRenderer>();
+
+        border.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
+        print("anuthing");
+        border.enabled = true;
+        
         
     }
 }
