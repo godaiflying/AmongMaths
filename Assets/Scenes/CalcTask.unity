@@ -708,7 +708,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Smaple
+  m_Text: Smaple txet
 --- !u!222 &379740107
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+  m_Color: {r: 0.3584906, g: 0.3567996, b: 0.3567996, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
