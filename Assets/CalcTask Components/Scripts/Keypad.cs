@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Keypad : MonoBehaviour
 {
+    var number1 = Random.Range(1, 12);
+    var number2 = Random.Range(1, 12);
     public int inputCurrent;
     public Button Submit;
     public Button Key1;
@@ -21,11 +23,10 @@ public class Keypad : MonoBehaviour
 
     public void Calculate()
     {
-        Key1.onClick.AddListener(Add1);
+        if(inputCurrent == (number1 * number2))
+        {
+            return
+        }
     }
 
-    void Add1()
-    {
-        inputCurrent = inputCurrent * 10 + 1;
-    }
 }
