@@ -88,3 +88,11 @@ The following packages were updated:
   com.unity.textmeshpro from version 2.0.1 to 3.0.1
   com.unity.timeline from version 1.2.15 to 1.4.7
 >>>>>>> 1f925a72ecc11bece1353455493b491f1e64d45f
+
+=== Wed Jun  9 12:31:51 2021
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.textmeshpro from version 2.1.6 to 3.0.1
