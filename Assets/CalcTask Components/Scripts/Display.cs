@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class Display : MonoBehaviour
 {
 
+    int n1;
+    int n2;
+    public Text Question;
 
     [SerializeField]
     private Sprite[] digits;
@@ -18,6 +21,11 @@ public class Display : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        n1 = Random.Range(0, 99);
+        n2 = Random.Range(0, 99);
+
+        Question.text = (n1 * n2).ToString();
+
         codeSequence = "";
 
         for (int i = 0; i <= characters.Length -1; i++)
@@ -126,7 +134,7 @@ public class Display : MonoBehaviour
 
     private void CheckResults()
     {
-        if (codeSequence == 1337)
+        if (codeSequence == Question.text)
         {
             Debug.Log("Correct.");
         }

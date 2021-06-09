@@ -15,7 +15,7 @@ public class RandomRange : MonoBehaviour
         n1 = Random.Range(0, 99);
         n2 = Random.Range(0, 99);
 
-        Text = (n1 * n2);
+        Question.text = (n1 * n2).ToString();
     }
 
 
