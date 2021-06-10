@@ -21,10 +21,10 @@ public class Display : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        n1 = Random.Range(0, 99);
-        n2 = Random.Range(0, 99);
+        n1 = Random.Range(1, 99);
+        n2 = Random.Range(1, 99);
 
-        Question.text = (n1 * n2).ToString();
+        Question.text = (n1 + " Times " + n2).ToString();
 
         codeSequence = "";
 
@@ -32,6 +32,7 @@ public class Display : MonoBehaviour
         {
             characters[i].sprite = digits[10];
         }
+
         PushTheButton.ButtonPressed += AddDigitToCodeSequence;
     }
 
@@ -39,7 +40,6 @@ public class Display : MonoBehaviour
     {
         if (codeSequence.Length < 4)
         {
-
             switch (digitEntered)
             {
                 case "Zero":
