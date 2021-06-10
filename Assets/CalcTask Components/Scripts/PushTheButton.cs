@@ -19,6 +19,7 @@ public class PushTheButton : MonoBehaviour
 
         gameObject.GetComponent<Button>().onClick.AddListener(ButtonClicked);
     }
+
     private void ButtonClicked()
     {
         ButtonPressed(buttonValue);
