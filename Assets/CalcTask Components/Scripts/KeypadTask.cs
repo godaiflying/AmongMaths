@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class KeypadTask : MonoBehaviour
 {
 
+    int n1;
+    int n2;
+
     public Text _cardCode;
 
     public Text _inputCode;
 
-    public int _codeLength = 5;
+    public int _codeLength = 3;
 
     public float _codeResetTimeInSeconds;
 
@@ -19,6 +22,9 @@ public class KeypadTask : MonoBehaviour
 
     private void OnEnable()
     {
+        n1 = Random.Range(0, 12);
+        n2 = Random.Range(0, 12);
+
         string code = string.Empty;
 
         for (int i = 0; i < _codeLength; i++)

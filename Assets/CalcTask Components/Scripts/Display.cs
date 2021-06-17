@@ -21,8 +21,8 @@ public class Display : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        n1 = Random.Range(0, 99);
-        n2 = Random.Range(0, 99);
+        n1 = Random.Range(0, 12);
+        n2 = Random.Range(0, 12);
 
         Question.text = (n1 * n2).ToString();
 
