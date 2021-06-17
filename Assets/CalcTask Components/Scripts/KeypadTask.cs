@@ -9,57 +9,53 @@ public class KeypadTask : MonoBehaviour
     int n1;
     int n2;
 
-    public Text _cardCode;
+    public Text cardCode ;
 
-    public Text _inputCode;
+    public Text inputCode;
 
-    public int _codeLength = 3;
+    public int codeLength;
 
-    public float _codeResetTimeInSeconds;
+    public string ans;
+
+    public float codeResetTimeInSeconds;
 
 
-    private bool _isResetting = false;
+    private bool isResetting = false;
 
     private void OnEnable()
     {
-        n1 = Random.Range(0, 12);
-        n2 = Random.Range(0, 12);
+        n1 = Random.Range(1, 9);
+        n2 = Random.Range(1, 9);
 
-        string code = string.Empty;
-
-        for (int i = 0; i < _codeLength; i++)
-        {
-            code += Random.Range(1, 10);
-        }
-
-        _cardCode.text = code;
-        _inputCode.text = string.Empty;
+        ans = (n1 * n2).ToString();
+        cardCode.text = (n1 + " x " + n2);
+        inputCode.text = string.Empty;
     }
 
     public void ButtonClick(int number)
     {
-        if (_isResetting) { return; }
+        if (isResetting) { return; }
 
-        _inputCode.text += number;
+        inputCode.text += number;
 
-        if (_inputCode.text == _cardCode.text)
+        if (inputCode.text == ans.TrimStart(new char[] { '0' }))
         {
-            _inputCode.text = "Correct.";
+            inputCode.text = inputCode.text + " is Correct.";
             StartCoroutine(ResetCode());
         }
-        else if (_inputCode.text.Length >= _codeLength)
+        else if (inputCode.text.Length >= codeLength)
         {
-            _inputCode.text = "Fail.";
+            inputCode.text = inputCode.text + " is Fail.";
             StartCoroutine(ResetCode());
 
         }
     }
     private IEnumerator ResetCode()
     {
-        _isResetting = true;
+        isResetting = true;
 
-        yield return new WaitForSeconds(_codeResetTimeInSeconds);
+        yield return new WaitForSeconds(codeResetTimeInSeconds);
 
-        _isResetting = false;
+        isResetting = false;
     }
 }
