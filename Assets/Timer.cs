@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     public Text TimerOutput;
     public Slider Timeslider;
     double timerCouter;
+    public Camera Emergencycam;
+
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +22,12 @@ public class Timer : MonoBehaviour
         TimerOutput.text = timerCouter.ToString("f2");
         float timerfloat = Convert.ToSingle(timerCouter);
         Timeslider.value = timerfloat;
+
+        if (timerfloat < 10)
+        {
+            Color Opaque = new Color(1, 1, 1, 1);
+            Emergencycam.backgroundColor = Color.Lerp(Emergencycam.backgroundColor, Opaque, 20 * Time.deltaTime); 
+        }
 
         if(timerfloat < 0.01 && timerfloat > -0.01)
         {

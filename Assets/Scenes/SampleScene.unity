@@ -12986,6 +12986,7 @@ MonoBehaviour:
   timeleft: 10
   TimerOutput: {fileID: 1762153903}
   Timeslider: {fileID: 2060911231}
+  Emergencycam: {fileID: 519420031}
 --- !u!114 &1488584464
 MonoBehaviour:
   m_ObjectHideFlags: 0
