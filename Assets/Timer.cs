@@ -8,14 +8,14 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
    
-    double timeleft = 5.0;
+    public double timeleft = 10.0;
     public Text TimerOutput;
     public Slider Timeslider;
     double timerCouter;
     // Update is called once per frame
     void Update()
     {
-        timerCouter = timeleft - Time.time;
+        timerCouter -= Time.deltaTime;
 
         TimerOutput.text = timerCouter.ToString("f2");
         float timerfloat = Convert.ToSingle(timerCouter);
@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
     }
     public void Start()
     {
-        timeleft = 10;
+        timerCouter = timeleft;
     }
 
     private void Endgame()

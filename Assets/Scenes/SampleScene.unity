@@ -12983,6 +12983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e6d7cc8087652478fbd4babf3de028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeleft: 10
   TimerOutput: {fileID: 1762153903}
   Timeslider: {fileID: 2060911231}
 --- !u!114 &1488584464
