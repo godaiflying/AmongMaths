@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 {
    
     public double timeleft = 10.0;
-    public Text TimerOutput;
+    
     public Slider Timeslider;
     double timerCouter;
     public Camera Emergencycam;
@@ -19,7 +19,6 @@ public class Timer : MonoBehaviour
     {
         timerCouter -= Time.deltaTime;
 
-        TimerOutput.text = timerCouter.ToString("f2");
         float timerfloat = Convert.ToSingle(timerCouter);
         Timeslider.value = timerfloat;
 
