@@ -797,3 +797,40 @@ Received Import Request.
 Start importing Assets/Scenes/GameOverSettings.lighting using Guid(a715a6592d2f15b43a52a33b7ed9de8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '468204d6ab0f398f5b17d6c86fc2b486') in 0.002797 seconds
   Import took 0.004607 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 268.468035 seconds.
+  path: Assets/Scenes/GameOver.unity
+  artifactKey: Guid(2237096bdd0339d4e91dc8b981b4f6ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/GameOver.unity using Guid(2237096bdd0339d4e91dc8b981b4f6ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa0ee2ecfa1bd8bc21d8e7b3a662d794') in 0.003063 seconds
+  Import took 0.005207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.299657 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(a6b9f97274092d548b88c5e686e3887a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.unity using Guid(a6b9f97274092d548b88c5e686e3887a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aeb5a82c8d216ab14c830bedb706f73b') in 0.002566 seconds
+  Import took 0.004768 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000732 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.677 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.17 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1084 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.0 MB.
+System memory in use after: 61.1 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1657.
+Total: 1.370800 ms (FindLiveObjects: 0.108300 ms CreateObjectMapping: 0.026600 ms MarkObjects: 1.207300 ms  DeleteObjects: 0.027700 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
