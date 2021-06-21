@@ -965,11 +965,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd98f3d07165094d9b0c6d562fc45e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delayTime: 5
   cardCode: {fileID: 1918606247}
   inputCode: {fileID: 1809606248}
   codeLength: 2
   ans: 
-  codeResetTimeInSeconds: 0
+  codeResetTimeInSeconds: 5
 --- !u!1 &987425657
 GameObject:
   m_ObjectHideFlags: 0

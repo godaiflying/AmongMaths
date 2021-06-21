@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class KeypadTask : MonoBehaviour
 {
@@ -9,23 +10,24 @@ public class KeypadTask : MonoBehaviour
     int n1;
     int n2;
 
+    public float delayTime = 3f;
+
+
     public Text cardCode ;
 
     public Text inputCode;
 
     public int codeLength;
 
-    public string ans;
-
-    public float codeResetTimeInSeconds;
+    private string ans;
 
 
     private bool isResetting = false;
 
     private void OnEnable()
     {
-        n1 = Random.Range(1, 9);
-        n2 = Random.Range(1, 9);
+        n1 = Random.Range(3, 9);
+        n2 = Random.Range(4, 9);
 
         ans = (n1 * n2).ToString();
         cardCode.text = (n1 + " x " + n2);
@@ -38,24 +40,26 @@ public class KeypadTask : MonoBehaviour
 
         inputCode.text += number;
 
-        if (inputCode.text == ans.TrimStart(new char[] { '0' }))
+        if (inputCode.text == ans)
         {
             inputCode.text = inputCode.text + " is Correct.";
-            StartCoroutine(ResetCode());
+            Invoke("DelayedActionCorrect", delayTime);
         }
         else if (inputCode.text.Length >= codeLength)
         {
             inputCode.text = inputCode.text + " is Fail.";
-            StartCoroutine(ResetCode());
+            Invoke("DelayedActionFail", delayTime);
 
         }
     }
-    private IEnumerator ResetCode()
+
+    void DelayedActionCorrect()
     {
-        isResetting = true;
-
-        yield return new WaitForSeconds(codeResetTimeInSeconds);
-
-        isResetting = false;
+        SceneManager.LoadScene(sceneBuildIndex: 0);
     }
+    void DelayedActionFail()
+    {
+        SceneManager.LoadScene(sceneBuildIndex: 2);
+    }
+
 }
